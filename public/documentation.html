@@ -1,16 +1,104 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kung Fu Film App</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Kung Fu Film App</h1>
+    </header>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kung Fu Film App</title>
-</head>
-
-<body>
-    <p>
-        This is an app I'm building to help people locate Kung Fu films that they might be interested in. 
-    </p>
-</body>
+    <table>
+      <thead>
+        <th>Endpoint Description</th>
+        <th>Method</th>
+        <th>URL</th>
+        <th>Body</th>
+        <th>Response</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Returns a JSON object of ALL movies</td>
+          <td class="get">GET</td>
+          <td>/movies</td>
+          <td>-</td>
+          <td>JSON</td>
+        </tr>
+        <tr>
+          <td>Returns a JSON object of a single movie</td>
+          <td class="get">GET</td>
+          <td>/movies/:Title</td>
+          <td>-</td>
+          <td>JSON</td>
+        </tr>
+        <tr>
+          <td>Returns a JSON object of all movies of a certain genre</td>
+          <td class="get">GET</td>
+          <td>/movies/genre/:Genre</td>
+          <td>-</td>
+          <td>JSON</td>
+        </tr>
+        <tr>
+          <td>Returns the description of a genre</td>
+          <td class="get">GET</td>
+          <td>/genre/:Genre</td>
+          <td>-</td>
+          <td>JSON</td>
+        </tr>
+        <tr>
+          <td>Returns a JSON object of a movie-director by name</td>
+          <td class="get">GET</td>
+          <td>/directors/:Name</td>
+          <td>-</td>
+          <td>JSON</td>
+        </tr>
+        <tr>
+          <td>Returns a JSON object of one user</td>
+          <td class="get">GET</td>
+          <td>/users/:Username</td>
+          <td>-</td>
+          <td>JSON</td>
+        </tr>
+        <tr>
+          <td>Creates a new user from a JSON</td>
+          <td class="post">POST</td>
+          <td>/users</td>
+          <td>JSON</td>
+          <td>201</td>
+        </tr>
+        <tr>
+          <td>Updates the information of a user</td>
+          <td class="put">PUT</td>
+          <td>/users/:Username</td>
+          <td>JSON</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td>Adds a movie to a user's list of favorite movies</td>
+          <td class="put">PUT</td>
+          <td>/users/:Username/movies/:_id</td>
+          <td>-</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td>Removes a movie from a user's list of favorite movies</td>
+          <td class="delete">DELETE</td>
+          <td>/users/:Username/movies/:_id</td>
+          <td>-</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td>Removes an existing user from the database</td>
+          <td class="delete">DELETE</td>
+          <td>/users/:Username</td>
+          <td>-</td>
+          <td>200</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 
 </html>
