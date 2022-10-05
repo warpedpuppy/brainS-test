@@ -8,7 +8,6 @@ morgan = require("morgan");
 app.use(bodyParser.json());
 
 
-app.use(morgan("common", { stream: accessLogStream }));
 app.use(express.static("public"));
 
 let users = [
@@ -41,6 +40,7 @@ let movies = [
       "Birthyear": "May 1, 1946",
       "Deathyear": "N/A",
     },
+    "Featured": "True"
   },
   {
     "id": 2,
@@ -58,6 +58,7 @@ let movies = [
       'Birthyear': "Nov 14, 1951",
       "Deathyear": "N/A",
     },
+    "Featured": "True"
   },
   {
     "id": 3,
@@ -75,6 +76,7 @@ let movies = [
       "Birthyear": "Oct 7, 1961",
       "Deathyear": "Aug 23, 2020",
     },
+    "Featured": "True"
   },
   {
     "id": 4,
@@ -92,6 +94,7 @@ let movies = [
       'Birthyear': "Oct 23, 1954",
       'Deathyear': "N/A",
     },
+    "Featured": "True"
   },
   {
     'id': 5,
@@ -109,6 +112,7 @@ let movies = [
       "Birthyear": "Oct 23, 1964",
       "Deathyear": "N/A",
     },
+    "Featured": "True"
   },
   {
     "id": 6,
@@ -126,6 +130,7 @@ let movies = [
       "Birthyear": "Nov 14, 1951",
       "Deathyear": "N/A",
     },
+    "Featured": "True"
   },
   {
     "id": 7,
@@ -143,6 +148,7 @@ let movies = [
       "Birthyear": "May 1, 1962",
       "Deathyear": "N/A",
     },
+    "Featured": "True"
   },
   {
     "id": 8,
@@ -160,6 +166,7 @@ let movies = [
       "Birthyear": "May 1, 1962",
       "Deathyear": "N/A",
     },
+    "Featured": "True"
   },
   {
     "id": 9,
@@ -177,6 +184,7 @@ let movies = [
       "Birthyear": "Nov 14, 1951",
       "Deathyear": "N/A",
     },
+    "Featured": "True"
   },
   {
     "id": 10,
@@ -194,6 +202,7 @@ let movies = [
       "Birthyear": "Jan 1, 1945",
       "Deathyear": "N/A",
     },
+    "Featured": "True"
   },
 ];
 
