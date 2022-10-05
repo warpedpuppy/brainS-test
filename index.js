@@ -57,7 +57,7 @@ let movies = [
     },
     "Director": {
       "Name": "Yimou Zhang",
-      "Bio": "Yimou Zhang was born on November 14, 1951 in Xi'an, Shaanxi, China. He is a director and writer, known for Hero (2002), House of Flying Daggers (2004) and Curse of the Golden Flower (2006).",
+      "Bio": "Yimou Zhang was born on November 14, 1951 in Xi''an, Shaanxi, China. He is a director and writer, known for Hero (2002), House of Flying Daggers (2004) and Curse of the Golden Flower (2006).",
       'Birthyear': "Nov 14, 1951",
       "Deathyear": "N/A",
     },
@@ -74,7 +74,7 @@ let movies = [
     },
     "Director": {
       'Name': "Benny Chan",
-      'Bio': "Benny Chan Muk-sing (simplified Chinese: 陈木胜; traditional Chinese: 陳木勝; pinyin: Chén Mùshèng; 24 October 1961[1] – 23 August 2020[2]) was a Hong Kong film director, producer and screenwriter.[3] He is best known for his feature films such as A Moment of Romance, Big Bullet, Who Am I?, Rob-B-Hood, New Police Story, Shaolin, The White Storm, Call of Heroes, and Raging Fire.",
+      'Bio': "Benny Chan Muk-sing was a Hong Kong film director, producer and screenwriter. He is best known for his feature films such as A Moment of Romance, Big Bullet, Who Am I?, Rob-B-Hood, New Police Story, Shaolin, The White Storm, Call of Heroes, and Raging Fire.",
       "Birthyear": "Oct 7, 1961",
       "Deathyear": "Aug 23, 2020",
     },
@@ -91,7 +91,7 @@ let movies = [
     },
     "Director": {
       "Name": "Ang Lee",
-      'Bio': "Born in 1954 in Pingtung, Taiwan, Ang Lee has become one of today's greatest contemporary filmmakers. Ang graduated from the National Taiwan College of Arts in 1975 and then came to the U.S. to receive a B.F.A. Degree in Theatre/Theater Direction at the University of Illinois at Urbana-Champaign, and a Masters Degree in Film Production at New York University.",
+      'Bio': "Born in 1954 in Pingtung, Taiwan, Ang graduated from the National Taiwan College of Arts in 1975 and then came to the U.S. to receive a B.F.A. Degree in Theatre/Theater Direction at the University of Illinois at Urbana-Champaign, and a Masters Degree in Film Production at New York University.",
       'Birthyear': "Oct 23, 1954",
       'Deathyear': "N/A",
     },
