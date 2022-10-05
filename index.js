@@ -7,9 +7,6 @@ uuid = require("uuid");
 morgan = require("morgan");
 app.use(bodyParser.json());
 
-const accessLogStream = fs.createWriteStream(path.join(__dirname, "log.txt"), {
-  flags: "a",
-});
 
 app.use(morgan("common", { stream: accessLogStream }));
 app.use(express.static("public"));
@@ -151,7 +148,7 @@ let movies = [
     "id": 8,
     "Title": "Shaolin Soccer",
     "Description":
-      "After a fateful mistake costing his career, an ex-soccer player bum meets a shaolin kung fu student trying to spread the word of kung fu. The ex-soccer player helps reconcile with his five brothers, and teaches them soccer, adding shaolin kung fu as a twist",
+      "After a fateful mistake costing his career, an ex-soccer player bum meets a shaolin kung fu student trying to spread the word of kung fu. The ex-soccer player helps reconcile with his five brothers, and teaches them soccer, adding shaolin kung fu as a twist.",
     "imgUrl":
       "https://m.media-amazon.com/images/M/MV5BMTk3NDg5NTE4MV5BMl5BanBnXkFtZTcwNzMxMjAwMQ@@._V1_.jpg",
     "Genre":{
