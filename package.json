@@ -3,19 +3,20 @@
     "body-parser": "^1.20.0",
     "express": "^4.18.1",
     "lodash": "^4.17.21",
+    "mongoose": "^6.6.5",
     "morgan": "^1.10.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20",
-    "eslint": "^8.24.0"
+    "eslint": "^8.24.0",
+    "nodemon": "^2.0.20"
   },
   "name": "movie_api",
   "description": "My Kung Fu film app",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "test", 
+    "test": "test",
     "dev": "nodemon index.js",
     "start": "node index.js"
   },
