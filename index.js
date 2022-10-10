@@ -215,12 +215,12 @@ app.use(express.static("public"));
 
 //Create
 app.post('/users', (req, res) => {
-  Users.findOne({ Username: req.body.Username })
+  users.findOne({ Username: req.body.Username })
     .then((user) => {
       if (user) {
         return res.status(400).send(req.body.Username + 'already exists');
       } else {
-        Users
+        users
           .create({
             Username: req.body.Username,
             Password: req.body.Password,
@@ -242,7 +242,7 @@ app.post('/users', (req, res) => {
 
 //Update
 app.put('/users/:Username', (req, res) => {
-  Users.findOneAndUpdate({ Username: req.params.Username }, { $set:
+  users.findOneAndUpdate({ Username: req.params.Username }, { $set:
     {
       Username: req.body.Username,
       Password: req.body.Password,
@@ -262,7 +262,7 @@ app.put('/users/:Username', (req, res) => {
 });
 
 app.post('/users/:Username/movies/:MovieID', (req, res) => {
-  Users.findOneAndUpdate({ Username: req.params.Username }, {
+  users.findOneAndUpdate({ Username: req.params.Username }, {
      $push: { FavoriteMovies: req.params.MovieID }
    },
    { new: true }, // This line makes sure that the updated document is returned
@@ -275,6 +275,8 @@ app.post('/users/:Username/movies/:MovieID', (req, res) => {
     }
   });
 });
+
+
 
 //Create
 
@@ -294,7 +296,7 @@ app.post("/users/:id/:movieTitle", (req, res) => {
 //Delete
 
 app.delete('/users/:Username/movies/:MovieID', (req, res) => {
-  Users.findOneAndUpdate({ Username: req.params.Username }, {
+  users.findOneAndUpdate({ Username: req.params.Username }, {
      $pull: { FavoriteMovies: req.params.MovieID }
    },
    { new: true }, // This line makes sure that the updated document is returned
@@ -309,7 +311,7 @@ app.delete('/users/:Username/movies/:MovieID', (req, res) => {
 });
 
 app.delete('/users/:Username', (req, res) => {
-  Users.findOneAndRemove({ Username: req.params.Username })
+  users.findOneAndRemove({ Username: req.params.Username })
     .then((user) => {
       if (!user) {
         res.status(400).send(req.params.Username + ' was not found');
@@ -372,7 +374,7 @@ app.get("/movies/director/:directorName", (req, res) => {
 });
 
 app.get('/users', (req, res) => {
-  Users.find()
+  users.find()
     .then((users) => {
       res.status(201).json(users);
     })
@@ -383,7 +385,7 @@ app.get('/users', (req, res) => {
 });
 
 app.get('/users/:Username', (req, res) => {
-  Users.findOne({ Username: req.params.Username })
+  users.findOne({ Username: req.params.Username })
     .then((user) => {
       res.json(user);
     })
