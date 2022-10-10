@@ -3,10 +3,10 @@ const app = express();
 const mongoose = require('mongoose');
 const Models = require('./models/models');
 
-const Movies = Models.Movie;
-const Users = Models.User;
+const movies = Models.movies;
+const users = Models.users;
 
-mongoose.connect('mongodb://localhost:27017/MyFlixDB',{useNewUrlParser: true, useUnifiedTopology:true});
+mongoose.connect('mongodb://localhost:27017/myFlixDB',{useNewUrlParser: true, useUnifiedTopology:true});
 
 (fs = require("fs")), (path = require("path"));
 bodyParser = require("body-parser");
@@ -276,8 +276,6 @@ app.post('/users/:Username/movies/:MovieID', (req, res) => {
   });
 });
 
-
-
 //Create
 
 app.post("/users/:id/:movieTitle", (req, res) => {
@@ -332,18 +330,21 @@ app.get("/", (req, res) => {
 });
 
 app.get("/movies", (req, res) => {
-  res.status(200).json(movies);
-});
+  return movies.find().then(result => {
+    res.json(result); 
+  }).catch(console.log)
+ });
+
 
 app.get("/movies/:title", (req, res) => {
   const { title } = req.params;
-  const movie = movies.find((movie) => movie.Title === title);
+  const movies = movies.find({title}).then(result=>{
+    if (result) {
+      res.status(200).json(result);
+    } else {
+      res.status(400).send("Title not found");
+    }  })
 
-  if (movie) {
-    res.status(200).json(movie);
-  } else {
-    res.status(400).send("Title not found");
-  }
 });
 
 app.get("/movies/genre/:genreName", (req, res) => {
