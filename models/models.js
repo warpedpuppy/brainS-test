@@ -4,7 +4,7 @@ const movieSchema = new mongoose.Schema({
   Title: { type: String, required: true },
   Description: { type: String, required: true },
   Genre: {
-    name: String,
+    Name: String,
     Description: String,
   },
   Director: {
@@ -16,7 +16,7 @@ const movieSchema = new mongoose.Schema({
 });
 
 const userSchema = new mongoose.Schema({
-  Username: { type: String, required: true },
+  name: { type: String, required: true },
   Password: { type: String, required: true },
   Email: { type: String, required: true },
   Birthday: Date,
