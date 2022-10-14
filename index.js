@@ -38,10 +38,7 @@ require("./passport");
 //   useUnifiedTopology: true,
 // });
 
-mongoose.connect("mongodb+srv://briansmawley:Blacklion1@myflixdb.567f5vo.mongodb.net/myFlixDB?retryWrites=true&w=majority",{
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect( process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 
