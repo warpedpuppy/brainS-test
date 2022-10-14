@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const { reset } = require("nodemon");
+// const { reset } = require("nodemon");
 // const { monitorEventLoopDelay } = require("perf_hooks");
 const Models = require("./models/models");
 const { check, validationResult } = require("express-validator");
